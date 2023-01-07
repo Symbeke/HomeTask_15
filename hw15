@@ -1,0 +1,23 @@
+matrix = [
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+]
+function strokeMatrix (matrix){
+    for(i=0;i < matrix.length;i++){
+        for(j=0;j<matrix[i].length;j++){
+        matrix[i].splice(0,1,1);
+        matrix[i].splice(matrix[i].length-1,1,1);
+        matrix[0].splice(0,matrix.length,1);
+    }
+    
+}   
+return matrix;
+}
+console.log(strokeMatrix(matrix));
